@@ -32,3 +32,4 @@ app.post('/tshirt/:id', (req, res) => {
     })
 });
 
+module.exports = app
