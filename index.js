@@ -8,10 +8,6 @@ app.get('/', (req, res) => {
     res.send('Hey this is my API running 🥳')
   })
 
-app.listen(
-    PORT, () => console.log(`The API is ready on https://localhost:${PORT}`));
-
-
 app.get('/tshirt', (req, res) => {
     res.status(200).send({
         tshirt: 'cool shirt bro!',
@@ -31,5 +27,8 @@ app.post('/tshirt/:id', (req, res) => {
         response: `${id} is the ID of your shirt and the logo is ${logo}`,
     })
 });
+
+app.listen(
+    PORT, () => console.log(`The API is ready on https://localhost:${PORT}`));
 
 module.exports = app
