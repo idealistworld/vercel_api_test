@@ -4,6 +4,10 @@ const PORT = 8080;
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Hey this is my API running 🥳')
+  })
+
 app.listen(
     PORT, () => console.log(`The API is ready on https://localhost:${PORT}`));
 
@@ -27,3 +31,4 @@ app.post('/tshirt/:id', (req, res) => {
         response: `${id} is the ID of your shirt and the logo is ${logo}`,
     })
 });
+
